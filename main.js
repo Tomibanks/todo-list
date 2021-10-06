@@ -9,7 +9,7 @@ const clearToDoButton = document.getElementById('clearToDo');
 addToDoButton.addEventListener('click', addToDo)
 clearToDoButton.addEventListener('click', clearToDo)
 toDoContainer.addEventListener('click', deleteToDo)
-toDoContainer.addEventListener('click', updateToDo)
+//toDoContainer.addEventListener('click', updateToDo)
 
 
 
@@ -21,21 +21,13 @@ function addToDo(e) {
  todoDiv.innerText = inputField.value;
  inputField.value = "";
 
- //newTodo
- //const newTodo = document.createElement('li');
- //newTodo.innerText = 'hey';
- //newTodo.classList.add('paragraph-style');
- //todoDiv.appendChild(newTodo)
-
- //check mark button
-
 const trashButton = document.createElement('button')
-trashButton.innerHTML = 'delete';
+trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+//trashButton.innerHTML = 'delete';
 trashButton.classList.add("complete-btn")
 todoDiv.appendChild(trashButton);
 
 const updateButton = document.createElement('button')
-//updateButton.innerHTML = '<i class="fas fa-trash"></i>';
 updateButton.innerHTML = 'update';
 updateButton.classList.add("complete")
 todoDiv.appendChild(updateButton);
@@ -47,27 +39,22 @@ todoDiv.appendChild(updateButton);
 
 
 function deleteToDo(e) {
- //console.log(e.target);
  const item = e.target;
- if (item.classList[0] === "complete-btn") {
  const toDoContainer = item.parentElement;
  toDoContainer.remove();
- }
 }
 
 function updateToDo(e) {
- //console.log(e.target);
- const item = e.target;
- if (item.classList[0] === "complete") {
- const toDoContainer = item.parentElement;
- toDoContainer.remove();
- }
+// console.log(e.target);
+ e.preventDefault();
+ 
 }
 
 function clearToDo(e) {
- console.log(e.target);
+ //console.log(e.target);
  e.preventDefault();
- toDoContainer.style.textDecoration = "line-through";
- //toDoContainer.remove();
- //toDoContainer.removeChild(todoDiv);
+ const item = e.target;
+ const toDoContainer = item.parentElement;
+ //toDoContainer.style.textDecoration = "line-through";
+ toDoContainer.remove();
 }
