@@ -1,5 +1,5 @@
 * {
-  box-sizing: 0;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
 }
@@ -34,20 +34,19 @@ p {
 }
 
 form input {
-  border: 1px solid blanchedalmond;
+  border: 1px solid rgb(231, 224, 213);
   background: white;
-  width: 100%;
+  width: 65%;
 }
 
 input {
-  padding: 20px 2px 4px 1px;
+  padding: 10px 2px 4px 1px;
 }
 
 button {
   margin-top: 20px;
-  padding: 5px 15px 5px 15px;
+  padding: 5px 10px 5px 10px;
   cursor: pointer;
-  border-radius: 10px;
   transition: 0s;
 }
 
@@ -60,8 +59,23 @@ button:hover {
   cursor: pointer;
   font-size: 18px;
   font-weight: bolder;
+  margin: 10px;
 }
 
 .to-dos {
-  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.complete-btn {
+  background-color: white;
+  margin-left: 10px;
+}
+
+.complete {
+  background-color: white;
+  margin-left: 5px;
+}
+
+.fa-trash {
+  pointer-events: none;
 }
