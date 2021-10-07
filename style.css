@@ -81,6 +81,7 @@ button:hover {
 .delete-btn {
   margin-left: 10px;
   transition: 0.5s;
+  color: rgb(209, 29, 29);
 }
 
 .delete-btn:hover {
