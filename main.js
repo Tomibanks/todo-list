@@ -15,22 +15,29 @@ toDoContainer.addEventListener('click', deleteToDo)
 
 //Functons
 function addToDo(e) {
+ const task = inputField.value;
+if (!task) {
+ alert("Please fill out the Todo Task. Love from Bankole David");
+ //inputField.value = "Please fill out the todo task";
+ return
+}
  e.preventDefault();
  const todoDiv = document.createElement('div');
  todoDiv.classList.add('paragraph-style');
  todoDiv.innerText = inputField.value;
  inputField.value = "";
+ 
 
 const trashButton = document.createElement('button')
-trashButton.innerHTML = '<i class="fas fa-trash"></i>';
-//trashButton.innerHTML = 'delete';
-trashButton.classList.add("complete-btn")
+//trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+trashButton.innerHTML = 'delete';
+trashButton.classList.add("delete-btn")
 todoDiv.appendChild(trashButton);
 
 const updateButton = document.createElement('button')
 updateButton.innerHTML = 'update';
-updateButton.classList.add("complete")
-todoDiv.appendChild(updateButton);
+updateButton.classList.add("update")
+//todoDiv.appendChild(updateButton);
  
 
  //append to toDoContainer
@@ -45,10 +52,11 @@ function deleteToDo(e) {
 }
 
 function updateToDo(e) {
-// console.log(e.target);
+ console.log(e.target);
  e.preventDefault();
  
 }
+
 
 function clearToDo(e) {
  //console.log(e.target);
@@ -57,4 +65,5 @@ function clearToDo(e) {
  const toDoContainer = item.parentElement;
  //toDoContainer.style.textDecoration = "line-through";
  toDoContainer.remove();
+ window.location.reload()
 }

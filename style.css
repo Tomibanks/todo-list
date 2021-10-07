@@ -7,8 +7,8 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
-  margin: 10px;
-  background-image: url(./todo.jpg);
+  margin: 20px;
+  background-image: linear-gradient(120deg, #0f0b02, #1a0702);
   background-position: center;
   background-size: cover;
   display: flex;
@@ -17,41 +17,52 @@ body {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 45px;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  color: white;
 }
 
 p {
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: bold;
+  color: white;
 }
 
 .container {
-  padding: 40px;
-  background-color: rgb(140, 143, 172);
+  padding: 0px 20px 50px 20px;
 }
 
 form input {
-  border: 1px solid rgb(231, 224, 213);
+  border: 1px solid rgb(46, 12, 12);
+  border-radius: 9px;
   background: white;
-  width: 65%;
+  width: 100%;
 }
 
 input {
-  padding: 10px 2px 4px 1px;
+  padding: 12px 2px 12px 10px;
 }
 
 button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button {
+  color: white;
   margin-top: 20px;
   padding: 5px 10px 5px 10px;
   cursor: pointer;
-  transition: 0s;
+  transition: 0.5s;
 }
 
 button:hover {
-  background: rgb(134, 98, 219);
+  color: peru;
+  font-weight: bolder;
 }
 
 .paragraph-style {
@@ -60,20 +71,29 @@ button:hover {
   font-size: 18px;
   font-weight: bolder;
   margin: 10px;
+  color: white;
 }
 
 .to-dos {
   margin-bottom: 20px;
 }
 
-.complete-btn {
-  background-color: white;
+.delete-btn {
   margin-left: 10px;
+  transition: 0.5s;
 }
 
-.complete {
-  background-color: white;
-  margin-left: 5px;
+.delete-btn:hover {
+  color: rgb(211, 49, 49);
+}
+
+.update {
+  margin-right: 5px;
+  transition: 0.5s;
+}
+
+.update:hover {
+  color: rgb(115, 115, 197);
 }
 
 .fa-trash {
