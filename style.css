@@ -8,7 +8,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
   margin: 20px;
-  background-image: linear-gradient(120deg, #0f0b02, #1a0702);
+  background-image: linear-gradient(120deg, #0f0b02, #1b0c09);
   background-position: center;
   background-size: cover;
   display: flex;
@@ -32,6 +32,8 @@ p {
 
 .container {
   padding: 0px 20px 50px 20px;
+  width: 400px;
+  max-width: 100%;
 }
 
 form input {
@@ -53,6 +55,7 @@ button {
 }
 
 button {
+  font-size: 15px;
   color: white;
   margin-top: 20px;
   padding: 5px 10px 5px 10px;
@@ -61,7 +64,6 @@ button {
 }
 
 button:hover {
-  color: peru;
   font-weight: bolder;
 }
 
@@ -81,22 +83,21 @@ button:hover {
 .delete-btn {
   margin-left: 10px;
   transition: 0.5s;
-  color: rgb(209, 29, 29);
+  color: rgb(211, 49, 49);
 }
 
 .delete-btn:hover {
   color: rgb(211, 49, 49);
 }
 
-.update {
-  margin-right: 5px;
-  transition: 0.5s;
-}
-
-.update:hover {
-  color: rgb(115, 115, 197);
-}
-
 .fa-trash {
   pointer-events: none;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
 }
