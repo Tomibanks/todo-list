@@ -14,7 +14,7 @@ submitButton.addEventListener("click", submitfield);
 //Functons
 
 function save() {
-  var new_data = "" + document.getElementById("input").value;
+  var new_data = " " + document.getElementById("input").value;
 
   if (localStorage.getItem("data") == null) {
     localStorage.setItem("data", "[]");
@@ -28,14 +28,14 @@ function save() {
 
 function view() {
   if (localStorage.getItem("data") != null) {
-    document.getElementById("output").innerHTML = JSON.parse(
+    document.getElementById("toDoContainer").innerHTML = JSON.parse(
       localStorage.getItem("data")
     );
+    document.getElementById("toDoContainer").classList.add("paragraph-style");
   }
 }
 
 function addToDo(e) {
-  localStorage.setItem("addToDo", addToDoButton);
   const task = input.value;
   if (!task) {
     alert("Please fill out the Todo Task");
