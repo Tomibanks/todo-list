@@ -57,7 +57,7 @@ button {
 
 button {
   font-size: 15px;
-  color: rgb(194, 194, 49);
+  color: rgb(194, 166, 129);
   padding: 5px 10px 5px 10px;
   cursor: pointer;
   transition: 0.5s;
@@ -105,12 +105,12 @@ button a {
 }
 
 .button-two a {
-  color: rgb(194, 194, 49);
+  color: rgb(194, 166, 129);
 }
 
 .button-three {
   float: right;
-  color: rgb(194, 194, 49);
+  color: rgb(194, 166, 129);
 }
 
 .list-style {
