@@ -12,7 +12,6 @@ toDoContainer.addEventListener("click", deleteToDo);
 submitButton.addEventListener("click", submitfield);
 
 //Functons
-
 function save() {
   var new_data = " " + document.getElementById("input").value;
 
@@ -64,7 +63,6 @@ function deleteToDo(e) {
 }
 
 function clearToDo(e) {
-  //console.log(e.target);
   e.preventDefault();
   const item = e.target;
   const toDoContainer = item.parentElement;
