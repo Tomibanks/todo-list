@@ -31,7 +31,7 @@ function view() {
     document.getElementById("toDoContainer").innerHTML = JSON.parse(
       localStorage.getItem("data")
     );
-    document.getElementById("toDoContainer").classList.add("paragraph-style");
+    document.getElementById("toDoContainer").classList.add("list-style");
   }
 }
 
