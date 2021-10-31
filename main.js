@@ -3,17 +3,16 @@ const addToDoButton = document.getElementById("addToDo");
 const toDoContainer = document.getElementById("toDoContainer");
 const input = document.getElementById("input");
 const clearToDoButton = document.getElementById("clearToDo");
-const submitButton = document.getElementById("submitfield");
 
 //Event listeners
 addToDoButton.addEventListener("click", addToDo);
 clearToDoButton.addEventListener("click", clearToDo);
 toDoContainer.addEventListener("click", deleteToDo);
-submitButton.addEventListener("click", submitfield);
 
 //Functons
+
 function save() {
-  var new_data = " " + document.getElementById("input").value;
+  var new_data = "<br>" + document.getElementById("input").value;
 
   if (localStorage.getItem("data") == null) {
     localStorage.setItem("data", "[]");
@@ -24,7 +23,6 @@ function save() {
 
   localStorage.setItem("data", JSON.stringify(old_data));
 }
-
 function view() {
   if (localStorage.getItem("data") != null) {
     document.getElementById("toDoContainer").innerHTML = JSON.parse(
@@ -68,8 +66,4 @@ function clearToDo(e) {
   const toDoContainer = item.parentElement;
   toDoContainer.remove();
   window.location.reload();
-}
-
-function submitfield(e) {
-  window.location.href = "todo.html";
 }

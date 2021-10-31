@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Bankole's Todo List</title>
- <link rel="stylesheet" href="style.css"> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Septa Todo List</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
- <div class="container">
-  <!--Todo list header-->
-  <h1>Todo List</h1>
-  <p style="margin-left: 5px;">New Task</p>
+  <div class="container">
+    <!--Todo list header-->
+    <h1>Task List</h1>
+    <p style="margin-left: 5px;">New Task</p>
 
-  <!--inputField ID Selector-->
-<form>
- <input id="input" type="text" placeholder="Add your todo"> <button onclick="save();" class="button-one" id="addToDo">Add Task</button>
-</form>
-<br>
- <hr size="1" width="100%" color="white">
- <br>
- <br>
- <h2 style="color: rgb(250, 250, 246); font-size: 17px; text-decoration: none; margin-left: 10px;">Tasks</h2>
-<!--toDoContainer ID Selector-->
-<div class="to-dos" id="toDoContainer"></div>
+    <!--inputField ID Selector-->
+    <form>
+      <input id="input" type="text" placeholder="Add your todo"> <button onclick="save();" class="button-one"
+        id="addToDo">Add Task</button>
+    </form>
+    <br>
+    <hr size="2" width="100%" color="cadetblue">
+    <br>
+    <br>
+    <h2 style="color: black; font-size: 17px; text-decoration: none; margin-left: 0px; font-size: 18px;">Tasks</h2>
+    <!--toDoContainer ID Selector-->
+    <div class="to-dos" id="toDoContainer"></div>
+    <hr size="2" width="100%" color="cadetblue">
 
-<!-- <button  onclick="view();" id="submitfield" class="button-twos">Submit</button> -->
+    <!--clearToDo ID Selector-->
+    <button class="button-two" id="clearToDo"><a>Clear</a></button>
 
-<!--clearToDo ID Selector-->
- <button class="button-two" id="clearToDo"><a>Clear</a></button> 
- 
- <button class="button-three" onclick="view();">View</button>
- </div>
- 
- <script src="main.js"></script>
+    <!--View todo selector-->
+    <button class="button-three" onclick="view();">View</button>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 
 
