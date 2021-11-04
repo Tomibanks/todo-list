@@ -5,40 +5,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Septa Todo List</title>
+  <title>My Todo</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <div class="container">
-    <!--Todo list header-->
     <h1>Task List</h1>
-    <p style="margin-left: 5px;">New Task</p>
+    <p>New Task</p>
+    <div class="myTodo">
+      <div class="inputvalue">
+        <input class="inputVal" type="text" placeholder="Add your Task" value="">
+      </div>
+      <button class="btn">Add Task</button>
 
-    <!--inputField ID Selector-->
-    <form>
-      <input id="input" type="text" placeholder="Add your todo"> <button onclick="save();" class="button-one"
-        id="addToDo">Add Task</button>
-    </form>
-    <br>
-    <hr size="2" width="100%" color="cadetblue">
-    <br>
-    <br>
-    <h2 style="color: black; font-size: 17px; text-decoration: none; margin-left: 0px; font-size: 18px;">Tasks</h2>
-    <!--toDoContainer ID Selector-->
-    <div class="to-dos" id="toDoContainer"></div>
-    <hr size="2" width="100%" color="cadetblue">
+      <hr size="2" width="100%" color="cadetblue">
+      <br>
+      <h2 style="color: black; font-size: 17px; text-decoration: none; margin-left: 0px; font-size: 18px;">Tasks</h2>
+      <br>
+      <br>
 
-    <!--clearToDo ID Selector-->
-    <button class="button-two" id="clearToDo"><a>Clear</a></button>
+      <div class="todoListItem">
 
-    <!--View todo selector-->
-    <button class="button-three" onclick="view();">View</button>
+      </div>
+
+      <hr size="2" width="100%" color="cadetblue">
+
+      <button class="clearTask" onclick="clearTask()">Clear</button>
+    </div>
   </div>
-
-  <script src="main.js"></script>
 </body>
-
+<script src="main.js"></script>
 
 </html>
