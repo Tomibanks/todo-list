@@ -46,6 +46,7 @@ p {
 .deleteTask {
   cursor: pointer;
   border: none;
+  background: none;
   color: red;
   float: right;
 }
