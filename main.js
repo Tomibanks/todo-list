@@ -9,14 +9,14 @@ addTaskBtn.addEventListener("click", function () {
     alert("Please fill out the todo Task");
     return;
   }
-  if (task.trim()) {
+  if (inputVal.value.trim()) {
     let localItems = JSON.parse(localStorage.getItem("localItem"));
     if (!localItems === null) {
       taskList = [];
     } else {
       taskList = localItems;
     }
-    taskList.push(task);
+    taskList.push(inputVal.value);
     localStorage.setItem("localItem", JSON.stringify(taskList));
     inputVal.value = "";
   }
