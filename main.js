@@ -1,4 +1,4 @@
-//selectors
+//selectors using const
 const inputVal = document.getElementsByClassName("inputVal")[0];
 const addTaskBtn = document.getElementsByClassName("btn")[0];
 
