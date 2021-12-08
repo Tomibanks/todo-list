@@ -11,12 +11,12 @@ addTaskBtn.addEventListener("click", function () {
   }
   if (inputVal.value.trim()) {
     let localItems = JSON.parse(localStorage.getItem("localItem"));
-    if (!localItems === null) {
+    if (localItems === null) {
       taskList = [];
     } else {
       taskList = localItems;
     }
-    taskList.push(inputVal.value);
+    localItems.push(inputVal.value);
     localStorage.setItem("localItem", JSON.stringify(taskList));
     inputVal.value = "";
   }
