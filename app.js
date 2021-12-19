@@ -9,20 +9,20 @@ addTaskBtn.addEventListener("click", function () {
     alert("Please fill out the todo Task");
     return;
   }
-  if (inputVal.value.trim()) {
-    let localItems = JSON.parse(localStorage.getItem("localItem"));
-    if (localItems === null) {
-      taskList = [];
-    } else {
-      taskList = localItems;
-    }
-    localItems.push(inputVal.value);
+  if (localStorage.getItem("localItem") === null) {
+    var taskList = [];
+    taskList.push(inputVal.value);
     localStorage.setItem("localItem", JSON.stringify(taskList));
     inputVal.value = "";
+  } else {
+    taskList = JSON.parse(localStorage.getItem("localItem"));
+    taskList.push(inputVal.value);
+    localStorage.setItem("localItem", JSON.stringify(taskList));
   }
-
+  inputVal.value = "";
   showlist();
 });
+
 function showlist() {
   let outPut = "";
   let taskListShow = document.querySelector(".todoListItem");
